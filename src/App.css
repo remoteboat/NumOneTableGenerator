@@ -1,0 +1,74 @@
+@import "~bulma/css/bulma.css";
+
+div.snake-tables {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.snake-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.snake-table--red {
+    border: solid red;
+}
+
+.snake-table--green {
+    border: solid green;
+}
+
+.snake-table--blue {
+    border: solid blue;
+}
+
+/* blue table goes away for small screens */
+@media(max-width: 1024px) {
+    .snake-table--blue {
+        display: none;
+    }
+}
+
+/* wrap tables for even smaller screens */
+@media(max-width: 768px) {
+    div.snake-tables {
+        flex-wrap: wrap;
+    }
+    .snake-table {
+        width: auto !important;
+    }
+}
+
+.snake-table__table {
+    width: 100%;
+}
+
+td.void {
+    background-color: #aaaaaa;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.configure__panel {
+    max-width: 500px;
+    margin: 20px;
+}
+
+.table-color-value {
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+.table-color-value--red {
+    color: red;
+}
+.table-color-value--green {
+    color: green;
+}
+.table-color-value--blue {
+    color: blue;
+}
